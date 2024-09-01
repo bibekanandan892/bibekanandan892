@@ -2,7 +2,7 @@
 
 Hi, I'm Bibekananda Nayak! 👋
 
-I am a dynamic Android Developer with over 2 years and 6 months of experience building high-performing Android applications. I specialize in leveraging Java, Kotlin, and the Android SDK, along with advanced tools and frameworks such as Jetpack Compose, App Bundle, Coroutines, and Play Console, to deliver robust solutions that enhance user satisfaction and drive business success. I also actively contribute to open-source projects, sharing my knowledge and collaborating with the developer community.
+I am a dynamic Android Developer with over 2 years and 7 months of experience building high-performing Android applications. I specialize in leveraging Java, Kotlin, and the Android SDK, along with advanced tools and frameworks such as Jetpack Compose, App Bundle, Coroutines, and Play Console, to deliver robust solutions that enhance user satisfaction and drive business success. I also actively contribute to open-source projects, sharing my knowledge and collaborating with the developer community.
 
 ### 🌟 Professional Impact
 
