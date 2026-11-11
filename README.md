@@ -23,11 +23,7 @@
   <img src="assets/memory.svg" width="100%" alt="Memento + MemLayer: a Mem0-style memory library. Extract facts, reconcile into ADD, UPDATE, DELETE or NONE, and store in a vector store sharded per user.">
 </a>
 
-<p align="center">
-  <a href="https://github.com/bibekanandan892/agentice-memory">
-    <img src="https://raw.githubusercontent.com/bibekanandan892/agentice-memory/main/docs/media/demo.gif" width="640" alt="Memento demo: a chat turn gets remembered, saved memories are listed, users are isolated, and a memory is forgotten.">
-  </a>
-</p>
+
 
 ## 🛠️ What I reach for
 
