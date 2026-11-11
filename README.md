@@ -1,96 +1,100 @@
-# Hi, I'm Bibekananda Nayak 👋
+<p align="center">
+  <img src="assets/header.svg" width="100%" alt="Bibekananda Nayak. Software Engineer, Applied AI, Bengaluru. I build AI agents that talk, act, and remember.">
+</p>
 
-**Software Engineer · Applied AI · Bengaluru**
+<p align="center">
+  <a href="https://www.bibekananda.in/"><img src="https://img.shields.io/badge/Website-16181a?style=for-the-badge&logo=googlechrome&logoColor=ff4e1b" alt="Website"></a>
+  <a href="https://www.bibekananda.in/blog/"><img src="https://img.shields.io/badge/Blog-188_posts_on_AI-ff4e1b?style=for-the-badge&logo=rss&logoColor=ff4e1b&labelColor=16181a" alt="Blog: 188 posts on AI"></a>
+  <a href="https://www.linkedin.com/in/bibekanandan892/"><img src="https://img.shields.io/badge/LinkedIn-16181a?style=for-the-badge" alt="LinkedIn"></a>
+  <a href="mailto:bibekanandan892@gmail.com"><img src="https://img.shields.io/badge/Email-16181a?style=for-the-badge&logo=gmail&logoColor=ff4e1b" alt="Email"></a>
+</p>
 
-I build AI agents end to end: real-time voice agents, autonomous browser agents, and long-term memory for LLMs. I care about the parts that make agents work in production, such as low-latency streaming, typed tool calling, context engineering, retrieval, and cost tracking. By day I ship consumer apps at **Swiggy**, and I write about what I learn almost daily.
+## 🤖 What I'm building
 
-🌐 [bibekananda.in](https://www.bibekananda.in/) · ✍️ [188 posts on AI](https://www.bibekananda.in/blog/) · 💼 [LinkedIn](https://www.linkedin.com/in/bibekanandan892/) · 📬 [Email](mailto:bibekanandan892@gmail.com)
+<a href="https://github.com/bibekanandan892/vyaparpay-voice-agent">
+  <img src="assets/voice-agent.svg" width="100%" alt="VyaparPay Voice Support Agent: a voice agent that sees your screen. WebRTC, Deepgram STT, Claude, streamed TTS with barge-in, fed by screen context, typed tools, and pgvector memory.">
+</a>
 
-## 🤖 AI projects
+<a href="https://github.com/bibekanandan892/ai-job-application-agent">
+  <img src="assets/job-agent.svg" width="100%" alt="AI Job Application Agent: a LangGraph pipeline that scouts, scores, applies with Playwright, and verifies, with a human in the loop through a Next.js dashboard.">
+</a>
 
-### [VyaparPay Voice Support Agent](https://github.com/bibekanandan892/vyaparpay-voice-agent)
+<a href="https://github.com/bibekanandan892/agentice-memory">
+  <img src="assets/memory.svg" width="100%" alt="Memento + MemLayer: a Mem0-style memory library. Extract facts, reconcile into ADD, UPDATE, DELETE or NONE, and store in a vector store sharded per user.">
+</a>
 
-Asha, a voice AI support agent that can see the user's screen, so it opens a support call already knowing what went wrong.
-
-- **Streaming voice loop:** Deepgram STT, Claude via OpenRouter, and sentence-chunked TTS, with Silero VAD and barge-in.
-- **Screen-aware context:** an on-device compiler turns a ~4,000-token UI tree into a ≤300-token semantic snapshot, including API errors that were never drawn on screen.
-- **Typed tool calling:** Pydantic in/out tools, where account facts are always fetched and the one mutating tool is gated on a spoken confirmation.
-- **Memory and RAG:** rolling summarization, profile merge, and pgvector semantic memory, with per-call cost tracking.
-- **Hand-rolled WebRTC:** two direct peers (libwebrtc and aiortc) with my own signaling protocol and self-hosted coturn, no managed voice platform.
-- **Status:** confirmed working end to end as a live two-way call on a real device.
-
-`Python` `FastAPI` `aiortc` `WebRTC` `pgvector` `Deepgram` `ElevenLabs` `OpenRouter`
-
-### [AI Job Application Agent](https://github.com/bibekanandan892/ai-job-application-agent)
-
-An autonomous, local-first agent that searches, ranks, and applies to roles, with a human in the loop.
-
-- **LangGraph orchestrator:** scout → score → apply → verify, with a SQLite checkpointer.
-- **Browser automation:** persistent Playwright sessions with platform adapters for LinkedIn Easy Apply and Greenhouse.
-- **Resume tailoring:** an embedding-scored bullet picker, then an LLM rewrite with a "do-not-invent" guard, plus a cover letter agent.
-- **LLM layer:** Anthropic client with prompt caching, retries, and cost tracking, behind a Groq/Anthropic provider abstraction.
-- **Oversight:** FastAPI WebSocket API and a Next.js dashboard with live event streaming and supervisor controls.
-
-`Python` `LangGraph` `Playwright` `FastAPI` `Next.js` `Anthropic SDK`
-
-### [Memento + MemLayer](https://github.com/bibekanandan892/agentice-memory)
-
-A personal AI assistant with real memory, built on a from-scratch Mem0-style memory library.
-
-- **Two-phase write path:** an extractor call turns a conversation into candidate facts, and a reconciler call decides `ADD` / `UPDATE` / `DELETE` / `NONE` against existing memories.
-- **Anti-hallucination id remap:** the model can never invent a plausible-looking memory id.
-- **User-sharded vector store:** a search physically cannot see another user's rows.
-- **Memory taxonomy:** every fact is tagged semantic, episodic, or procedural.
-- **Front ends:** CLI, REST, and an MCP server, running on Gemini with local embeddings.
-
-`Python` `Gemini` `sentence-transformers` `SQLite` `FastAPI` `MCP`
-
-### 🔬 Currently researching
-
-**Memory in LLMs:** comparing vector-similarity recall, rolling summarization, and structured episodic stores for agent memory across sessions.
-
-## ✍️ Writing
-
-Notes on what I'm learning, in my own words. 188 posts in 2026 so far, all on AI. A few by theme:
-
-- **Agents:** [The agent loop](https://www.bibekananda.in/blog/agent-loop/) · [AI agent memory](https://www.bibekananda.in/blog/ai-agent-memory/) · [AI agent evaluation](https://www.bibekananda.in/blog/ai-agent-evaluation/) · [MCP](https://www.bibekananda.in/blog/mcp/) · [Context engineering](https://www.bibekananda.in/blog/context-engineering/)
-- **Voice agents:** [Stopping speech the instant the user interrupts](https://www.bibekananda.in/blog/stopping-speech-on-interruption/) · [Barge-in in voice agents](https://www.bibekananda.in/blog/barge-in-in-voice-agents/) · [Endpointing in voice agents](https://www.bibekananda.in/blog/endpointing-in-voice-agents/) · [Backchannels in voice agents](https://www.bibekananda.in/blog/backchannels-in-voice-agents/)
-- **RAG:** [Agentic RAG](https://www.bibekananda.in/blog/agentic-rag/) · [Chunking strategies for RAG](https://www.bibekananda.in/blog/chunking-strategies-for-rag/) · [Contextual retrieval](https://www.bibekananda.in/blog/contextual-retrieval/) · [Embeddings](https://www.bibekananda.in/blog/embeddings/)
-- **LLM internals:** [Decoding the transformer architecture](https://www.bibekananda.in/blog/decoding-transformer-architecture/) · [KV cache in LLMs](https://www.bibekananda.in/blog/kv-cache-llm-inference/) · [Log probabilities (logprobs) in LLMs](https://www.bibekananda.in/blog/logprobs-in-llms/) · [Fine-tuning](https://www.bibekananda.in/blog/fine-tuning/)
-- **Safety:** [Prompt Injection in LLMs](https://www.bibekananda.in/blog/prompt-injection/) · [Jailbreaking in LLMs](https://www.bibekananda.in/blog/jailbreaking-in-llms/)
-
-More at [bibekananda.in/blog](https://www.bibekananda.in/blog/).
+<p align="center">
+  <a href="https://github.com/bibekanandan892/agentice-memory">
+    <img src="https://raw.githubusercontent.com/bibekanandan892/agentice-memory/main/docs/media/demo.gif" width="640" alt="Memento demo: a chat turn gets remembered, saved memories are listed, users are isolated, and a memory is forgotten.">
+  </a>
+</p>
 
 ## 🛠️ What I reach for
 
-- **Applied AI:** Anthropic SDK, OpenAI SDK, Gemini, LangGraph, MCP, tool calling, prompt caching, context engineering
-- **Retrieval and memory:** embeddings, pgvector, RAG, rolling summarization, episodic memory stores
-- **Voice:** WebRTC (aiortc, libwebrtc), Deepgram STT, ElevenLabs TTS, Silero VAD, barge-in
-- **Agents and automation:** Playwright agents, human-in-the-loop dashboards
-- **Backend:** Python, FastAPI, Ktor, Node / Next.js, PostgreSQL, MongoDB, REST + WebSocket
-- **Platform:** AWS, Linux, Docker, GitHub Actions
-- **Mobile:** Kotlin, Jetpack Compose, Compose Multiplatform, ML Kit / on-device
+<p align="center">
+  <img src="https://img.shields.io/badge/Anthropic-16181a?style=for-the-badge&logo=anthropic&logoColor=ff4e1b" alt="Anthropic">
+  <img src="https://img.shields.io/badge/Gemini-16181a?style=for-the-badge&logo=googlegemini&logoColor=ff4e1b" alt="Gemini">
+  <img src="https://img.shields.io/badge/OpenRouter-16181a?style=for-the-badge&logo=openrouter&logoColor=ff4e1b" alt="OpenRouter">
+  <img src="https://img.shields.io/badge/LangGraph-16181a?style=for-the-badge&logo=langgraph&logoColor=ff4e1b" alt="LangGraph">
+  <img src="https://img.shields.io/badge/MCP-16181a?style=for-the-badge&logo=modelcontextprotocol&logoColor=ff4e1b" alt="MCP">
+  <br>
+  <img src="https://img.shields.io/badge/WebRTC-16181a?style=for-the-badge&logo=webrtc&logoColor=ff4e1b" alt="WebRTC">
+  <img src="https://img.shields.io/badge/Deepgram-16181a?style=for-the-badge&logo=deepgram&logoColor=ff4e1b" alt="Deepgram">
+  <img src="https://img.shields.io/badge/ElevenLabs-16181a?style=for-the-badge&logo=elevenlabs&logoColor=ff4e1b" alt="ElevenLabs">
+  <img src="https://img.shields.io/badge/pgvector-16181a?style=for-the-badge&logo=postgresql&logoColor=ff4e1b" alt="pgvector">
+  <img src="https://img.shields.io/badge/SQLite-16181a?style=for-the-badge&logo=sqlite&logoColor=ff4e1b" alt="SQLite">
+  <br>
+  <img src="https://img.shields.io/badge/Python-16181a?style=for-the-badge&logo=python&logoColor=ff4e1b" alt="Python">
+  <img src="https://img.shields.io/badge/FastAPI-16181a?style=for-the-badge&logo=fastapi&logoColor=ff4e1b" alt="FastAPI">
+  <img src="https://img.shields.io/badge/Next.js-16181a?style=for-the-badge&logo=nextdotjs&logoColor=ff4e1b" alt="Next.js">
+  <img src="https://img.shields.io/badge/Kotlin-16181a?style=for-the-badge&logo=kotlin&logoColor=ff4e1b" alt="Kotlin">
+  <img src="https://img.shields.io/badge/Ktor-16181a?style=for-the-badge&logo=ktor&logoColor=ff4e1b" alt="Ktor">
+  <br>
+  <img src="https://img.shields.io/badge/Docker-16181a?style=for-the-badge&logo=docker&logoColor=ff4e1b" alt="Docker">
+  <img src="https://img.shields.io/badge/Linux-16181a?style=for-the-badge&logo=linux&logoColor=ff4e1b" alt="Linux">
+  <img src="https://img.shields.io/badge/GitHub_Actions-16181a?style=for-the-badge&logo=githubactions&logoColor=ff4e1b" alt="GitHub Actions">
+  <img src="https://img.shields.io/badge/AWS-16181a?style=for-the-badge" alt="AWS">
+</p>
 
-## 💼 Experience
+## ✍️ Writing
 
-**Software Engineer I · Swiggy** (Feb 2025 – Present)
+<table>
+  <tr>
+    <td width="33%" align="center">
+      <a href="https://www.bibekananda.in/blog/agent-loop/"><img src="https://www.bibekananda.in/blog/agent-loop.svg" width="100%" alt="The agent loop"></a>
+      <br><sub><b>The agent loop</b></sub>
+    </td>
+    <td width="33%" align="center">
+      <a href="https://www.bibekananda.in/blog/barge-in-in-voice-agents/"><img src="https://www.bibekananda.in/blog/barge-in-in-voice-agents.svg" width="100%" alt="Barge-in in voice agents"></a>
+      <br><sub><b>Barge-in in voice agents</b></sub>
+    </td>
+    <td width="33%" align="center">
+      <a href="https://www.bibekananda.in/blog/ai-agent-memory/"><img src="https://www.bibekananda.in/blog/ai-agent-memory.svg" width="100%" alt="AI agent memory"></a>
+      <br><sub><b>AI agent memory</b></sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" align="center">
+      <a href="https://www.bibekananda.in/blog/agentic-rag/"><img src="https://www.bibekananda.in/blog/agentic-rag.svg" width="100%" alt="Agentic RAG"></a>
+      <br><sub><b>Agentic RAG</b></sub>
+    </td>
+    <td width="33%" align="center">
+      <a href="https://www.bibekananda.in/blog/kv-cache-llm-inference/"><img src="https://www.bibekananda.in/blog/kv-cache-llm-inference.svg" width="100%" alt="KV cache in LLMs"></a>
+      <br><sub><b>KV cache in LLMs</b></sub>
+    </td>
+    <td width="33%" align="center">
+      <a href="https://www.bibekananda.in/blog/prompt-injection/"><img src="https://www.bibekananda.in/blog/prompt-injection.svg" width="100%" alt="Prompt Injection in LLMs"></a>
+      <br><sub><b>Prompt Injection in LLMs</b></sub>
+    </td>
+  </tr>
+</table>
 
-- Consumer apps used by tens of millions of users every day.
-- Feature work in a large monorepo, plus performance and startup-time investigations.
+<p align="center">
+  <a href="https://www.bibekananda.in/blog/"><img src="https://img.shields.io/badge/Read_all_188_posts_→-ff4e1b?style=for-the-badge" alt="Read all 188 posts"></a>
+</p>
 
-**Kotlin Android Developer · iServeU** (Jan 2022 – Feb 2025)
+## 🧭 Journey
 
-- Built and shipped financial-services apps for India's micro-banking and agent-banking networks.
-- Owned modules end to end, from product spec to release, and drove modularisation, build-time reduction, and CI hardening.
-- Mentored junior developers and ran code review culture.
-
-## 🎓 Education
-
-**Veer Surendra Sai University of Technology, Odisha**: B.Tech in Electronics and Telecommunication (2019 – 2022)
-
-## 📬 Contact
-
-- **Email:** [bibekanandan892@gmail.com](mailto:bibekanandan892@gmail.com)
-- **LinkedIn:** [linkedin.com/in/bibekanandan892](https://www.linkedin.com/in/bibekanandan892/)
-- **GitHub:** [github.com/bibekanandan892](https://github.com/bibekanandan892)
-- **Website:** [bibekananda.in](https://www.bibekananda.in/)
+<p align="center">
+  <img src="assets/timeline.svg" width="100%" alt="2019 to 2022: B.Tech in Electronics and Telecommunication at VSSUT, Odisha. 2022 to 2025: iServeU, fintech apps for micro-banking networks. 2025 to now: Software Engineer I at Swiggy. 2026: applied AI, three agent projects and 188 posts on AI.">
+</p>
